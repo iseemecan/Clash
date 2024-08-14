@@ -1,19 +1,11 @@
-# Global Media
 # > Movie
 DOMAIN-SUFFIX,ddys.pro
 DOMAIN-SUFFIX,ddys.mov
 DOMAIN-SUFFIX,ddys.info
-DOMAIN-SUFFIX,ganjing.world
-DOMAIN-SUFFIX,ganjingworld.com
 
 # > R-18
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,rou.video
 DOMAIN-SUFFIX,missav.com
 DOMAIN-SUFFIX,netflav.com
-
-# > Other
-DOMAIN-SUFFIX,yysub.cc
-DOMAIN-SUFFIX,yysub.net
-DOMAIN-SUFFIX,roum12.xyz
 DOMAIN-SUFFIX,rouman5.com
