@@ -1,4 +1,9 @@
 # Proxy
+# > Apk
+DOMAIN-SUFFIX,apkcombo.com
+DOMAIN-SUFFIX,apkcombo.org
+DOMAIN-SUFFIX,apkflash.net
+
 # > Study
 DOMAIN-SUFFIX,canada.ca
 DOMAIN-SUFFIX,indeed.com
@@ -11,6 +16,5 @@ DOMAIN-SUFFIX,ipify.org
 DOMAIN-SUFFIX,bityun.org
 DOMAIN-SUFFIX,paimon.moe
 DOMAIN-SUFFIX,kimovil.com
-DOMAIN-SUFFIX,apkcombo.com
 DOMAIN-SUFFIX,gsmarena.com
 DOMAIN-SUFFIX,androidcombo.com
