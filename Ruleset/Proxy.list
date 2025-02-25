@@ -1,0 +1,18 @@
+# Proxy
+# > Apk
+DOMAIN-SUFFIX,apkcombo.app
+DOMAIN-SUFFIX,apkflash.net
+DOMAIN-KEYWORD,apkcombo
+
+# > Study
+DOMAIN-SUFFIX,canada.ca
+DOMAIN-SUFFIX,indeed.com
+DOMAIN-SUFFIX,kimovil.com
+DOMAIN-SUFFIX,gsmarena.com
+DOMAIN-SUFFIX,cambridge.org
+DOMAIN-SUFFIX,sixthtone.com
+DOMAIN-SUFFIX,applyboard.com
+
+# > Other
+DOMAIN-SUFFIX,ipify.org
+DOMAIN-KEYWORD,fwcloud
