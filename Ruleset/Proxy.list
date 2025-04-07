@@ -1,6 +1,6 @@
 # Proxy
 # > Apk
-OMAIN-SUFFIX,apkflash.net
+DOMAIN-SUFFIX,apkflash.net
 DOMAIN-KEYWORD,apkcombo
 
 # > Study
@@ -12,8 +12,8 @@ DOMAIN-SUFFIX,sixthtone.com
 DOMAIN-SUFFIX,applyboard.com
 
 # > Other
-OMAIN-SUFFIX,tgstat.com
+DOMAIN-SUFFIX,tgstat.com
 DOMAIN-SUFFIX,ipify.org
 DOMAIN-SUFFIX,ip.sb
-OMAIN-KEYWORD,fwcloud
+DOMAIN-KEYWORD,fwcloud
 DOMAIN-KEYWORD,playrix
