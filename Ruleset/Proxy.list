@@ -1,7 +1,6 @@
 # Proxy
 # > Apk
 DOMAIN-SUFFIX,apkflash.net
-DOMAIN-KEYWORD,apkcombo
 
 # > Study
 DOMAIN-SUFFIX,indeed.com
