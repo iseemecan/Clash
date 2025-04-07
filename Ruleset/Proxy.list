@@ -1,9 +1,5 @@
 # Proxy
 # > Apk
-DOMAIN,assets.pubpowerplatform.io
-DOMAIN,ss-pbs.quantumdex.io
-DOMAIN,sync.quantumdex.io
-DOMAIN,uc.guddledberith.com
 DOMAIN-SUFFIX,apkcombo.app
 DOMAIN-SUFFIX,apkflash.net
 DOMAIN-KEYWORD,apkcombo
