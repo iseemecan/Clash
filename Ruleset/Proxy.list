@@ -1,0 +1,17 @@
+# Proxy
+# > Apk
+DOMAIN-SUFFIX,apkmirror.com
+
+# > Study
+DOMAIN-SUFFIX,indeed.com
+DOMAIN-SUFFIX,tgstat.com
+DOMAIN-SUFFIX,kimovil.com
+DOMAIN-SUFFIX,gsmarena.com
+DOMAIN-SUFFIX,cambridge.org
+DOMAIN-SUFFIX,sixthtone.com
+DOMAIN-SUFFIX,applyboard.com
+
+# > Other
+DOMAIN-SUFFIX,ipify.org
+DOMAIN-SUFFIX,ip.sb
+DOMAIN-KEYWORD,fwcloud
