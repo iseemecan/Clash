@@ -1,5 +1,5 @@
-# > Apk
-DOMAIN-SUFFIX,apkmirror.com
+# > Airport
+DOMAIN-KEYWORD,fwcloud
 
 # > IP
 DOMAIN-SUFFIX,ip.sb
@@ -12,6 +12,3 @@ DOMAIN-SUFFIX,gsmarena.com
 DOMAIN-SUFFIX,cambridge.org
 DOMAIN-SUFFIX,sixthtone.com
 DOMAIN-SUFFIX,applyboard.com
-
-# > Airport
-DOMAIN-KEYWORD,fwcloud
