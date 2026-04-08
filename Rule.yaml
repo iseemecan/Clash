@@ -315,9 +315,9 @@ rule-providers:
     format: text
     type: http
 
-  ProxyDomain:
-    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/ProxyDomain.list
-    path: ./ruleset/ProxyDomain.list
+  Rule:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/Rule.list
+    path: ./ruleset/Rule.list
     behavior: classical
     interval: 86400
     format: text
@@ -374,7 +374,7 @@ rules:
   - "RULE-SET,Telegram,Telegram"
   - "RULE-SET,Microsoft,Microsoft"
   - "RULE-SET,Steam,Steam"
-  - "RULE-SET,ProxyDomain,Proxies"
+  - "RULE-SET,Rule,Proxies"
   - "RULE-SET,Proxy,Proxies"
   - "RULE-SET,Apple,Domestic"
   - "RULE-SET,China,Domestic"
