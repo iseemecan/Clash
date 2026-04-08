@@ -316,7 +316,7 @@ rule-providers:
     type: http
 
   ProxyDomain:
-    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/Proxy.list
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/ProxyDomain.list
     path: ./ruleset/ProxyDomain.list
     behavior: classical
     interval: 86400
