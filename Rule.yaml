@@ -1,5 +1,6 @@
 proxy-groups:
   - name: Proxies
+    include-all: true
     type: select
     proxies:
       - 日本
@@ -8,26 +9,20 @@ proxy-groups:
       - 香港
       - 美国
       - 新加坡
-      - Select
       - DIRECT
 
-  - name: Select
-    include-all: true
-    type: select
-
   - name: Other
+    include-all: true
     type: select
     proxies:
       - Proxies
       - DIRECT
-      - Select
 
   - name: Domestic
     type: select
     proxies:
       - DIRECT
       - Proxies
-      - Select
 
   - name: Adblock
     type: select
@@ -36,22 +31,23 @@ proxy-groups:
       - DIRECT
 
   - name: Ai
+    include-all: true
+    exclude-filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: select
     proxies:
       - 美国
       - 日本
       - 台湾
       - 新加坡
-      - Select
 
   - name: CMedia
     type: select
     proxies:
       - DIRECT
       - Proxies
-      - Select
 
   - name: GMedia
+    include-all: true
     type: select
     proxies:
       - 日本
@@ -60,9 +56,9 @@ proxy-groups:
       - 香港
       - 美国
       - 新加坡
-      - Select
 
   - name: Google
+    include-all: true
     type: select
     proxies:
       - 美国
@@ -71,9 +67,9 @@ proxy-groups:
       - 台湾
       - 香港
       - 新加坡
-      - Select
 
   - name: GitHub
+    include-all: true
     type: select
     proxies:
       - 日本
@@ -82,9 +78,9 @@ proxy-groups:
       - 香港
       - 美国
       - 新加坡
-      - Select
 
   - name: Telegram
+    include-all: true
     type: select
     proxies:
       - 日本
@@ -93,21 +89,20 @@ proxy-groups:
       - 香港
       - 美国
       - 新加坡
-      - Select
 
   - name: Microsoft
+    include-all: true
     type: select
     proxies:
       - DIRECT
       - Proxies
-      - Select
 
   - name: Steam
+    include-all: true
     type: select
     proxies:
       - DIRECT
       - Proxies
-      - Select
 
   - name: 日本
     include-all: true
