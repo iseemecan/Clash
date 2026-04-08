@@ -1,311 +1,377 @@
-proxies: 
-  - name: "DIRECT"
-    type: direct
-
-mixed-port: 7890
-ipv6: false
-allow-lan: true
-unified-delay: false
-tcp-concurrent: true
-external-controller: 127.0.0.1:9090
-external-ui: ui
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-keep-alive-interval: 1800
-
-geodata-mode: true
-geodata-loader: standard
-geo-auto-update: false
-geo-update-interval: 24
-geox-url:
-  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/Country.mmdb"
-  asn: "https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
-
-find-process-mode: strict
-global-client-fingerprint: chrome
-
-profile:
-  store-selected: true
-  store-fake-ip: true
-
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  skip-domain:
-    - "Mijia Cloud"
-    - "+.push.apple.com"
-
-tun:
-  enable: true
-  stack: mixed
-  dns-hijack:
-    - "any:53"
-    - "tcp://any:53"
-  auto-route: true
-  auto-redirect: true
-  auto-detect-interface: true
-
-dns:
-  enable: true
-  ipv6: false
-  respect-rules: true
-  enhanced-mode: fake-ip
-  fake-ip-filter:
-    - "*"
-    - "+.lan"
-    - "+.local"
-    - "+.market.xiaomi.com"
-  nameserver:
-    - https://120.53.53.53/dns-query
-    - https://223.5.5.5/dns-query
-  proxy-server-nameserver:
-    - https://120.53.53.53/dns-query
-    - https://223.5.5.5/dns-query
-  nameserver-policy:
-    "rule-set:cn_domain,private_domain":
-      - https://120.53.53.53/dns-query
-      - https://223.5.5.5/dns-query
-    "rule-set:geolocation-!cn":
-      - "https://dns.cloudflare.com/dns-query"
-      - "https://dns.google/dns-query"
-
 proxy-groups:
-
   - name: Proxies
     type: select
-    proxies: [日本,韩国,台湾,香港,美国,新加坡,Select,DIRECT]
+    proxies:
+      - 日本
+      - 韩国
+      - 台湾
+      - 香港
+      - 美国
+      - 新加坡
+      - Select
+      - DIRECT
+
+  - name: Select
+    include-all: true
+    type: select
 
   - name: Other
     type: select
-    proxies: [Proxies,DIRECT,Select]
+    proxies:
+      - Proxies
+      - DIRECT
+      - Select
 
   - name: Domestic
     type: select
-    proxies: [DIRECT,Proxies,Select]
+    proxies:
+      - DIRECT
+      - Proxies
+      - Select
+
+  - name: Adblock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
 
   - name: Ai
     type: select
-    proxies: [美国,日本,台湾,新加坡,Select]
+    proxies:
+      - 美国
+      - 日本
+      - 台湾
+      - 新加坡
+      - Select
+
+  - name: CMedia
+    type: select
+    proxies:
+      - DIRECT
+      - Proxies
+      - Select
+
+  - name: GMedia
+    type: select
+    proxies:
+      - 日本
+      - 韩国
+      - 台湾
+      - 香港
+      - 美国
+      - 新加坡
+      - Select
 
   - name: Google
     type: select
-    proxies: [美国,日本,韩国,台湾,香港,新加坡,Select]
+    proxies:
+      - 美国
+      - 日本
+      - 韩国
+      - 台湾
+      - 香港
+      - 新加坡
+      - Select
 
   - name: GitHub
     type: select
-    proxies: [日本,韩国,台湾,香港,美国,新加坡,Select]
+    proxies:
+      - 日本
+      - 韩国
+      - 台湾
+      - 香港
+      - 美国
+      - 新加坡
+      - Select
+
+  - name: Telegram
+    type: select
+    proxies:
+      - 日本
+      - 韩国
+      - 台湾
+      - 香港
+      - 美国
+      - 新加坡
+      - Select
 
   - name: Microsoft
     type: select
-    proxies: [DIRECT,Proxies,Select]
+    proxies:
+      - DIRECT
+      - Proxies
+      - Select
 
-  #分隔,下面是地区分组
+  - name: Steam
+    type: select
+    proxies:
+      - DIRECT
+      - Proxies
+      - Select
+
   - name: 日本
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: url-test
-    use:
-      - ProviderAirPort
-    filter: "(?i)日本|jp|japan"
-    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-    #lazy: true    
 
   - name: 韩国
+    include-all: true
+    filter: (?i)KR|Korea|KOR|首尔|韩
     type: url-test
-    use:
-      - ProviderAirPort
-    filter: "(?i)韩国|kr|korea"
-    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-    #lazy: true    
 
   - name: 台湾
+    include-all: true
+    filter: (?i)台|新北|彰化|TW|Taiwan
     type: url-test
-    use:
-      - ProviderAirPort
-    filter: "(?i)台|tw|taiwan"
-    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-    #lazy: true    
 
   - name: 香港
+    include-all: true
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: url-test
-    use:
-      - ProviderAirPort
-    filter: "(?i)港|hk|hongkong|hong kong"
-    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-    #lazy: true
 
   - name: 美国
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|西雅图|芝加哥|US|United States
     type: url-test
-    use:
-      - ProviderAirPort
-    filter: "(?i)美|us|unitedstates|united states"
-    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-    #lazy: true    
 
   - name: 新加坡
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: url-test
-    use:
-      - ProviderAirPort
-    filter: "(?i)(新|sg|singapore)"
-    url: 'http://www.apple.com/library/test/success.html'
     interval: 300
     tolerance: 50
-    #lazy: true    
-
-  - name: Select
-    type: select
-    include-all: true
 
 rule-providers:
-  private_domain:
-    type: http
+  Lan:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list
+    path: ./ruleset/Lan.list
+    behavior: classical
     interval: 86400
-    behavior: domain
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.list"
-  cn_domain:
     type: http
+  Download:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.list
+    path: ./ruleset/Download.list
+    behavior: classical
     interval: 86400
-    behavior: domain
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list"
-  github_domain:
     type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.list"
-  twitter_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.list"
-  youtube_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.list"
-  google_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.list"
-  telegram_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.list"
-  openai_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.list"    
-  microsoft_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.list"      
-  geolocation-!cn:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
-  gfw_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list"         
 
-  private_ip:
-    type: http
+  BanAD:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/BanAD.list
+    path: ./ruleset/BanAD.list
+    behavior: classical
     interval: 86400
-    behavior: ipcidr 
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.list"
-  cn_ip:
     type: http
+  BanProgramAD:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/BanProgramAD.list
+    path: ./ruleset/BanProgramAD.list
+    behavior: classical
     interval: 86400
-    behavior: ipcidr 
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.list"
-  google_ip:
     type: http
+  Sogou:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/Sogou.list
+    path: ./ruleset/Sogou.list
+    behavior: classical
     interval: 86400
-    behavior: ipcidr 
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.list"
-  netflix_ip:
     type: http
+
+  OpenAI:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+    path: ./ruleset/OpenAI.list
+    behavior: classical
     interval: 86400
-    behavior: ipcidr 
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.list"
-  twitter_ip:
     type: http
+  Copilot:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
+    path: ./ruleset/Copilot.list
+    behavior: classical
     interval: 86400
-    behavior: ipcidr 
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.list"
-  telegram_ip:
     type: http
+
+  CMedia:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/CMedia.list
+    path: ./ruleset/CMedia.list
+    behavior: classical
     interval: 86400
-    behavior: ipcidr 
     format: text
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
+    type: http
+  ChinaMedia:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.list
+    path: ./ruleset/ChinaMedia.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  GMedia:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/GMedia.list
+    path: ./ruleset/GMedia.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Netflix:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+    path: ./ruleset/Netflix.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Spotify:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list
+    path: ./ruleset/Spotify.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  Gemini:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
+    path: ./ruleset/Gemini.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Google:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list
+    path: ./ruleset/Google.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  GoogleFCM:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.list
+    path: ./ruleset/GoogleFCM.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  YouTube:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+    path: ./ruleset/YouTube.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  YouTubeMusic:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.list
+    path: ./ruleset/YouTubeMusic.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  GitHub:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+    path: ./ruleset/GitHub.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  Telegram:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+    path: ./ruleset/Telegram.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  Microsoft:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  Steam:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list
+    path: ./ruleset/Steam.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  ProxyDomain:
+    url: https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/Proxy.list
+    path: ./ruleset/ProxyDomain.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Proxy:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.list
+    path: ./ruleset/Proxy.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+
+  Apple:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+    path: ./ruleset/Apple.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  China:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.list
+    path: ./ruleset/China.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  ChinaIPs:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs.list
+    path: ./ruleset/ChinaIPs.list
+    behavior: ipcidr
+    interval: 86400
+    format: text
+    type: http
 
 rules:
-  - RULE-SET,private_ip,DIRECT,no-resolve
-  - RULE-SET,openai_domain,Ai
-  - RULE-SET,youtube_domain,Google
-  - RULE-SET,google_domain,Google
-  - RULE-SET,github_domain,Github
-  - RULE-SET,telegram_domain,Telegram
-  - RULE-SET,twitter_domain,Twitter
-  - RULE-SET,microsoft_domain,Microsoft
-  - RULE-SET,geolocation-!cn,Other
-  - RULE-SET,cn_domain,Domestic
-  - RULE-SET,gfw_domain,Other
-
-  - RULE-SET,google_ip,Google
-  - RULE-SET,telegram_ip,Telegram
-  - RULE-SET,twitter_ip,Twitter
-  - RULE-SET,cn_ip,Domestic
-  - MATCH,Other
-
-  - GEOIP,lan,DIRECT,no-resolve
-  - GEOSITE,youtube,Google
-  - GEOSITE,google,Google
-  - GEOSITE,github,Github
-  - GEOSITE,telegram,Telegram
-  - GEOSITE,twitter,Twitter
-  - GEOSITE,CN,Domestic
-  - GEOSITE,geolocation-!cn,Other
-
-  - GEOIP,google,Google
-  - GEOIP,telegram,Telegram
-  - GEOIP,twitter,Twitter
-  - GEOIP,CN,Domestic
+  - "RULE-SET,Lan,DIRECT"
+  - "RULE-SET,Download,DIRECT"
+  - "RULE-SET,BanAD,Adblock"
+  - "RULE-SET,BanProgramAD,Adblock"
+  - "RULE-SET,Sogou,Adblock"
+  - "RULE-SET,OpenAI,Ai"
+  - "RULE-SET,Copilot,Ai"
+  - "RULE-SET,CMedia,CMedia"
+  - "RULE-SET,ChinaMedia,CMedia"
+  - "RULE-SET,GMedia,GMedia"
+  - "RULE-SET,Netflix,GMedia"
+  - "RULE-SET,Spotify,GMedia"
+  - "RULE-SET,Gemini,Google"
+  - "RULE-SET,Google,Google"
+  - "RULE-SET,GoogleFCM,Google"
+  - "RULE-SET,YouTube,Google"
+  - "RULE-SET,YouTubeMusic,Google"
+  - "RULE-SET,GitHub,GitHub"
+  - "RULE-SET,Telegram,Telegram"
+  - "RULE-SET,Microsoft,Microsoft"
+  - "RULE-SET,Steam,Steam"
+  - "RULE-SET,ProxyDomain,Proxies"
+  - "RULE-SET,Proxy,Proxies"
+  - "RULE-SET,Apple,Domestic"
+  - "RULE-SET,China,Domestic"
+  - "RULE-SET,ChinaIPs,Domestic"
+  - "GEOIP,CN,Domestic"
+  - "MATCH,Other"
