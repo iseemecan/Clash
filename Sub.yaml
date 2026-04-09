@@ -19,7 +19,7 @@ redir-port: 0
 tproxy-port: 0
 allow-lan: false
 unified-delay: true
-tcp-concurrent: false
+tcp-concurrent: true
 log-level: info
 find-process-mode: strict
 bind-address: "*"
@@ -151,6 +151,12 @@ proxy-groups:
       - 台湾
       - 新加坡
 
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxies
+
   - name: CMedia
     type: select
     proxies:
@@ -162,9 +168,9 @@ proxy-groups:
     include-all: true
     proxies:
       - 日本
-      - 韩国
-      - 台湾
       - 香港
+      - 台湾
+      - 韩国
       - 美国
       - 新加坡
 
@@ -172,11 +178,11 @@ proxy-groups:
     type: select
     include-all: true
     proxies:
-      - 日本
-      - 韩国
-      - 台湾
-      - 香港
       - 美国
+      - 日本
+      - 香港
+      - 台湾
+      - 韩国
       - 新加坡
 
   - name: GitHub
@@ -184,9 +190,9 @@ proxy-groups:
     include-all: true
     proxies:
       - 日本
-      - 韩国
-      - 台湾
       - 香港
+      - 台湾
+      - 韩国
       - 美国
       - 新加坡
 
@@ -195,9 +201,9 @@ proxy-groups:
     include-all: true
     proxies:
       - 日本
-      - 韩国
-      - 台湾
       - 香港
+      - 台湾
+      - 韩国
       - 美国
       - 新加坡
 
@@ -313,6 +319,13 @@ rule-providers:
     format: text
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list"
 
+  Apple:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list"
+
   CMedia:
     type: http
     interval: 86400
@@ -417,12 +430,6 @@ rule-providers:
     format: text
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.list"
 
-  Apple:
-    type: http
-    interval: 86400
-    behavior: classical
-    format: text
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list"
   China:
     type: http
     interval: 86400
@@ -444,6 +451,7 @@ rules:
   - "RULE-SET,Sogou,Adblock"
   - "RULE-SET,OpenAI,Ai"
   - "RULE-SET,Copilot,Ai"
+  - "RULE-SET,Apple,Apple"
   - "RULE-SET,CMedia,CMedia"
   - "RULE-SET,ChinaMedia,CMedia"
   - "RULE-SET,GMedia,GMedia"
@@ -460,7 +468,6 @@ rules:
   - "RULE-SET,Steam,Steam"
   - "RULE-SET,Rule,Proxies"
   - "RULE-SET,Proxy,Proxies"
-  - "RULE-SET,Apple,Domestic"
   - "RULE-SET,China,Domestic"
   - "RULE-SET,ChinaIPs,Domestic"
   - "GEOIP,CN,Domestic"

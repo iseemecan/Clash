@@ -50,9 +50,9 @@ proxy-groups:
     include-all: true
     proxies:
       - 日本
-      - 韩国
-      - 台湾
       - 香港
+      - 台湾
+      - 韩国
       - 美国
       - 新加坡
 
@@ -60,11 +60,11 @@ proxy-groups:
     type: select
     include-all: true
     proxies:
-      - 日本
-      - 韩国
-      - 台湾
-      - 香港
       - 美国
+      - 日本
+      - 香港
+      - 台湾
+      - 韩国
       - 新加坡
 
   - name: GitHub
@@ -72,9 +72,9 @@ proxy-groups:
     include-all: true
     proxies:
       - 日本
-      - 韩国
-      - 台湾
       - 香港
+      - 台湾
+      - 韩国
       - 美国
       - 新加坡
 
@@ -83,9 +83,9 @@ proxy-groups:
     include-all: true
     proxies:
       - 日本
-      - 韩国
-      - 台湾
       - 香港
+      - 台湾
+      - 韩国
       - 美国
       - 新加坡
 
