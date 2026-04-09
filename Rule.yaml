@@ -39,6 +39,12 @@ proxy-groups:
       - 台湾
       - 新加坡
 
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxies
+
   - name: CMedia
     type: select
     proxies:
