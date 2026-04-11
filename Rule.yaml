@@ -327,7 +327,7 @@ rule-providers:
   ChinaIPs:
     type: http
     interval: 86400
-    behavior: ipcidr
+    behavior: classical
     format: text
     url: "https://raw.githubusercontent.com/iseemecan/Clash/master/Ruleset/ChinaIPs.list"
 
