@@ -398,7 +398,7 @@ DOMAIN-SUFFIX,xtzxmy.com
 DOMAIN-SUFFIX,xyrkl.com
 DOMAIN-SUFFIX,zhuanfakong.com
 
-# > ByteDance 头条抖音
+# > ByteDance
 DOMAIN-SUFFIX,ad.toutiao.com
 DOMAIN-SUFFIX,dsp.toutiao.com
 DOMAIN-SUFFIX,ic.snssdk.com
@@ -656,6 +656,35 @@ DOMAIN-SUFFIX,wbpctips.mobile.sina.cn
 DOMAIN-SUFFIX,zymo.mps.weibo.com
 
 # > Sougou
+DOMAIN-SUFFIX,sososnap.com
+DOMAIN-SUFFIX,soso.com
+DOMAIN-SUFFIX,soso.com.cn
+DOMAIN-SUFFIX,teemo.cn
+DOMAIN-SUFFIX,imancheng.cn
+DOMAIN-SUFFIX,yeyousg.com
+DOMAIN-SUFFIX,sgyeyou.com
+DOMAIN-SUFFIX,ggowan.com
+DOMAIN-SUFFIX,ggoplay.com
+DOMAIN-SUFFIX,sgyouxi.com
+DOMAIN-SUFFIX,sogoucdn.com
+DOMAIN-SUFFIX,sogou.cn
+DOMAIN-SUFFIX,sogou.com.cn
+DOMAIN-SUFFIX,sogo.com
+DOMAIN-SUFFIX,sogou-inc.com
+DOMAIN-SUFFIX,sogou-op.org
+DOMAIN-SUFFIX,sogou.com
+DOMAIN-SUFFIX,sogou.net
+DOMAIN-SUFFIX,pinyin.cn
+DOMAIN-SUFFIX,qd.ink
+DOMAIN-SUFFIX,baokang.com
+DOMAIN-SUFFIX,go2map.com
+DOMAIN-SUFFIX,sg.cn
+DOMAIN-SUFFIX,wowenwen.com
+DOMAIN-SUFFIX,xinyan.cn
+DOMAIN-SUFFIX,yidianliulan.cn
+DOMAIN-SUFFIX,yidianliulan.com
+
+# > Sougou
 DOMAIN-SUFFIX,123.sogou.com
 DOMAIN-SUFFIX,123.sogoucdn.com
 DOMAIN-SUFFIX,adsence.sogou.com
@@ -759,7 +788,7 @@ DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
 
-# > Xunlei 迅雷app&看看
+# > Xunlei 迅雷
 DOMAIN-SUFFIX,biz5.kankan.com
 DOMAIN-SUFFIX,float.kankan.com
 DOMAIN-SUFFIX,hub5btmain.sandai.net
@@ -794,9 +823,9 @@ DOMAIN-SUFFIX,ybp.yahoo.com
 
 # > Zhihu
 
-# > Ads in Video apps 下面都是 ********************
+# > Ads in Video apps 下面都是
 
-# > 6间房
+# > 六间房
 DOMAIN-SUFFIX,shrek.6.cn
 DOMAIN-SUFFIX,simba.6.cn
 DOMAIN-SUFFIX,union.6.cn
@@ -849,7 +878,7 @@ IP-CIDR,101.227.200.28/32,no-resolve
 IP-CIDR,101.227.97.240/32,no-resolve
 IP-CIDR,124.192.153.42/32,no-resolve
 
-# > Ku6 酷6
+# > Ku6
 DOMAIN-SUFFIX,gug.ku6cdn.com
 DOMAIN-SUFFIX,pq.stat.ku6.com
 DOMAIN-SUFFIX,st.vq.ku6.cn
@@ -915,36 +944,7 @@ DOMAIN-SUFFIX,wan.sohu.com
 DOMAIN-SUFFIX,wl.hd.sohu.com
 DOMAIN-SUFFIX,yule.sohu.com
 
-# > Sogou 搜狗
-DOMAIN-SUFFIX,sososnap.com
-DOMAIN-SUFFIX,soso.com
-DOMAIN-SUFFIX,soso.com.cn
-DOMAIN-SUFFIX,teemo.cn
-DOMAIN-SUFFIX,imancheng.cn
-DOMAIN-SUFFIX,yeyousg.com
-DOMAIN-SUFFIX,sgyeyou.com
-DOMAIN-SUFFIX,ggowan.com
-DOMAIN-SUFFIX,ggoplay.com
-DOMAIN-SUFFIX,sgyouxi.com
-DOMAIN-SUFFIX,sogoucdn.com
-DOMAIN-SUFFIX,sogou.cn
-DOMAIN-SUFFIX,sogou.com.cn
-DOMAIN-SUFFIX,sogo.com
-DOMAIN-SUFFIX,sogou-inc.com
-DOMAIN-SUFFIX,sogou-op.org
-DOMAIN-SUFFIX,sogou.com
-DOMAIN-SUFFIX,sogou.net
-DOMAIN-SUFFIX,pinyin.cn
-DOMAIN-SUFFIX,qd.ink
-DOMAIN-SUFFIX,baokang.com
-DOMAIN-SUFFIX,go2map.com
-DOMAIN-SUFFIX,sg.cn
-DOMAIN-SUFFIX,wowenwen.com
-DOMAIN-SUFFIX,xinyan.cn
-DOMAIN-SUFFIX,yidianliulan.cn
-DOMAIN-SUFFIX,yidianliulan.com
-
-# > PPTV、PPLive
+# > PPTV & PPLive
 DOMAIN-SUFFIX,afp.pplive.com
 DOMAIN-SUFFIX,app.aplus.pptv.com
 DOMAIN-SUFFIX,as.aplus.pptv.com
@@ -1062,7 +1062,7 @@ DOMAIN-SUFFIX,static.duoshuo.com
 DOMAIN-SUFFIX,t.cr-nielsen.com
 DOMAIN-SUFFIX,terren.cntv.cn
 
-# > Ads in Video apps end 上面都是 ********************
+# Ads in Video apps end
 
 # > 常用网站广告
 DOMAIN-SUFFIX,1.win7china.com
