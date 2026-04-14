@@ -784,13 +784,13 @@ DOMAIN-SUFFIX,news-imgpb.51y5.net
 DOMAIN-SUFFIX,wifiapidd.51y5.net
 DOMAIN-SUFFIX,wkanc.51y5.net
 
-# > Ximalaya 喜马拉雅
+# > 喜马拉雅
 DOMAIN-SUFFIX,adse.ximalaya.com
 DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
 
-# > Xunlei 迅雷
+# > 迅雷
 DOMAIN-SUFFIX,biz5.kankan.com
 DOMAIN-SUFFIX,float.kankan.com
 DOMAIN-SUFFIX,hub5btmain.sandai.net
@@ -834,7 +834,7 @@ DOMAIN-SUFFIX,union.6.cn
 DOMAIN-SUFFIX,logger.baofeng.com
 DOMAIN-SUFFIX,xs.houyi.baofeng.net
 
-# > Douyu
+# > 斗鱼
 DOMAIN-SUFFIX,dotcounter.douyutv.com
 
 # > 凤凰tv
