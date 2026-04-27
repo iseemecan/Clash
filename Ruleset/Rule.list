@@ -1,9 +1,6 @@
 # > Airport
 DOMAIN-KEYWORD,fwcloud
 
-# > Game
-DOMAIN-KEYWORD,playrix
-
 # > IP
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ipify.org
