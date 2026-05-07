@@ -14,8 +14,8 @@ proxy-groups:
     type: select
     include-all: true
     proxies:
-      - DIRECT
       - Proxies
+      - DIRECT
 
   - name: Domestic
     type: select
