@@ -714,6 +714,5 @@ DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,95516.com
 
 # > Game
-DOMAIN-KEYWORD,playrix
 PROCESS-NAME,Game.exe
 PROCESS-NAME,snow_launcher.exe
