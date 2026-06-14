@@ -366,13 +366,11 @@ DOMAIN-KEYWORD,avoddashs
 
 # > Manga
 DOMAIN-SUFFIX,colamanga.com
-DOMAIN-SUFFIX,rouman5.com
-DOMAIN-SUFFIX,rou.video
+
+# > Media
+DOMAIN-KEYWORD,libvio
 
 # > SkrBT
-DOMAIN-SUFFIX,skrbtpv.top
-DOMAIN-SUFFIX,skrbtao.cc
-DOMAIN-SUFFIX,skrbtso.cc
 DOMAIN-SUFFIX,soskr.net
 DOMAIN-KEYWORD,skrbt
 
@@ -380,3 +378,5 @@ DOMAIN-KEYWORD,skrbt
 DOMAIN-SUFFIX,jable.tv
 DOMAIN-SUFFIX,missav.ai
 DOMAIN-SUFFIX,netflav.com
+DOMAIN-SUFFIX,rouman5.com
+DOMAIN-SUFFIX,rou.video
