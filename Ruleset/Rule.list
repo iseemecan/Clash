@@ -1,10 +1,10 @@
-# > Airport
-DOMAIN-KEYWORD,fwcloud
-
-# > ZeroTier
-DOMAIN-SUFFIX,zerotier.com
-DOMAIN-KEYWORD,zerotier
+# > BrownDustⅡ
+DOMAIN-SUFFIX,xsolla.com
+DOMAIN-KEYWORD,browndust2
 
 # > IP
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ipify.org
+
+# > ZeroTier
+DOMAIN-KEYWORD,zerotier

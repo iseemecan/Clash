@@ -8,7 +8,6 @@ DOMAIN,streamingaudio.itunes.apple.com
 DOMAIN-SUFFIX,applemusic.com
 DOMAIN-SUFFIX,blobstore.apple.com
 DOMAIN-SUFFIX,music.apple.com
-PROCESS-NAME,Music
 
 # > AppleTV
 DOMAIN,hls-amt.itunes.apple.com
@@ -18,7 +17,6 @@ DOMAIN,play-edge.itunes.apple.com
 DOMAIN,tv.applemusic.com
 DOMAIN,uts-api.itunes.apple.com
 DOMAIN-SUFFIX,tv.apple.com
-PROCESS-NAME,TV
 
 # > Bahamut
 DOMAIN,bahamut.akamaized.net
@@ -232,8 +230,6 @@ DOMAIN-SUFFIX,thewaltdisneycompany.com
 DOMAIN-SUFFIX,thisispolaris.com
 DOMAIN-SUFFIX,watchdisneyfe.com
 DOMAIN-SUFFIX,watchespn.com
-PROCESS-NAME,com.disney.datg.videoplatforms.android.abc
-PROCESS-NAME,com.disney.disneyplus
 
 # > Emby
 DOMAIN,emby.enjoyit.eu.org
@@ -287,7 +283,6 @@ DOMAIN-SUFFIX,xmsl.org
 DOMAIN-KEYWORD,emby.wtf
 DOMAIN-KEYWORD,jmsooo
 DOMAIN-KEYWORD,odysseyplus
-PROCESS-NAME,com.mb.android
 
 # > TikTok
 DOMAIN,lf16-effectcdn.byteeffecttos-g.com
@@ -321,7 +316,6 @@ DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,ttwebview.com
 DOMAIN-KEYWORD,musical.ly
 DOMAIN-KEYWORD,tiktok
-PROCESS-NAME,com.zhiliaoapp.musically
 
 # > tvb
 DOMAIN,bcbolt446c5271-a.akamaihd.net
