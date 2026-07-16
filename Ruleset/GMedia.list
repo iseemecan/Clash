@@ -359,7 +359,8 @@ DOMAIN-SUFFIX,pv-cdn.net
 DOMAIN-KEYWORD,avoddashs
 
 # > Manga
-DOMAIN-SUFFIX,colamanga.com
+DOMAIN-KEYWORD,colamanga
+DOMAIN-KEYWORD,bangumi
 
 # > Media
 DOMAIN-KEYWORD,libvio
@@ -370,7 +371,6 @@ DOMAIN-KEYWORD,skrbt
 
 # > R-18
 DOMAIN-SUFFIX,jable.tv
-DOMAIN-SUFFIX,missav.ai
-DOMAIN-SUFFIX,netflav.com
-DOMAIN-SUFFIX,rouman5.com
 DOMAIN-SUFFIX,rou.video
+DOMAIN-SUFFIX,rouman5.com
+DOMAIN-KEYWORD,missav
