@@ -1,8 +1,17 @@
-# > Games
+# > BrownDust2
 DOMAIN-KEYWORD,xsolla
 DOMAIN-KEYWORD,browndust2
 
-# > IP
+# > MuMu
+DOMAIN-SUFFIX,mumuplayer.com
+DOMAIN-SUFFIX,mumuglobal.com
+
+# > Playrix
+DOMAIN-SUFFIX,404.playrix.com
+DOMAIN-SUFFIX,stats.playrix.com
+DOMAIN-SUFFIX,homescapes.playrix.com
+
+# > Other
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-SUFFIX,ipify.org
 
